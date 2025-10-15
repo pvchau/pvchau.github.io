@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Vinh Chau - Electrical Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 0 2rem 0;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            animation: fadeInDown 1s ease;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            opacity: 0.95;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease 0.3s both;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 0.6rem 1.5rem;
+            background: rgba(255,255,255,0.15);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-info a:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-3px);
+        }
+
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 2rem 0;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: fadeIn 1s ease 0.6s both;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            color: #1e3c72;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #2a5298;
+        }
+
+        h3 {
+            color: #2a5298;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .education-item, .experience-item {
+            margin-bottom: 2rem;
+        }
+
+        .institution {
+            font-weight: 600;
+            color: #1e3c72;
+            font-size: 1.2rem;
+        }
+
+        .degree {
+            color: #555;
+            font-size: 1.05rem;
+            margin: 0.3rem 0;
+        }
+
+        .details {
+            color: #666;
+            font-size: 0.95rem;
+            margin: 0.3rem 0;
+        }
+
+        .projects {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 1.8rem;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(30, 60, 114, 0.3);
+        }
+
+        .project-card h3 {
+            color: #1e3c72;
+            margin-top: 0;
+            margin-bottom: 0.8rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-category h3 {
+            color: #1e3c72;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: transform 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            transform: scale(1.05);
+        }
+
+        ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 2rem 0;
+            opacity: 0.85;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .title {
+                font-size: 1.2rem;
+            }
+
+            .content {
+                padding: 2rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Peter Vinh Chau</h1>
+            <p class="title">Electrical Engineer (M.S. ECE, UCLA '25)</p>
+            <p class="tagline">Mixed-Signal & Embedded Hardware | FPGA/HDL | Defense/Avionics Systems | DO-160 Practices</p>
+            <div class="contact-info">
+                <a href="mailto:peterchau@ucla.edu">Email</a>
+                <a href="https://linkedin.com/in/pvchau" target="_blank">LinkedIn</a>
+                <a href="https://github.com/pvchau" target="_blank">GitHub</a>
+            </div>
+        </header>
+
+        <div class="content">
+            <section class="section">
+                <h2>About Me</h2>
+                <p>Early-career Electrical Engineer with a Master's degree in Electrical & Computer Engineering from UCLA, specializing in mixed-signal and embedded hardware, FPGA/HDL design, and rapid prototype bring-up for defense and avionics systems. Security clearance eligible (ITAR/EAR) with hands-on experience in RF coverage modeling, DO-160 compliance, and systems integration.</p>
+            </section>
+
+            <section class="section">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <div class="institution">University of California, Los Angeles (UCLA)</div>
+                    <div class="degree">Master of Science – Electrical & Computer Engineering</div>
+                    <div class="details">September 2023 – June 2025 | GPA: 3.54</div>
+                    <div class="details">Concentrations: Communications, Signals & Systems, Artificial Intelligence</div>
+                    <div class="details">Honors: EKN ECE Honor Society</div>
+                </div>
+                <div class="education-item">
+                    <div class="institution">University of California, Riverside (UCR)</div>
+                    <div class="degree">Bachelor of Science – Electrical Engineering</div>
+                    <div class="details">September 2019 – September 2023 | GPA: 3.72</div>
+                    <div class="details">Concentrations: Communications, Signal Processing, Networking</div>
+                    <div class="details">Honors: Dean's List (9x)</div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Professional Experience</h2>
+                <div class="experience-item">
+                    <h3>Wireless Connectivity Systems Engineering Intern</h3>
+                    <div class="institution">Panasonic Avionics Corporation – Irvine, CA</div>
+                    <div class="details">June 2025 – September 2025</div>
+                    <ul>
+                        <li>Built iBwave RF coverage models comparing line-fit vs. retrofit aircraft Wi-Fi; simulation models supported a Boeing contract award</li>
+                        <li>Modeled RF/Wi-Fi coverage for A330, 777X, & 737-MAX-8; optimized antenna placement & EMI mitigation under DO-160-aligned validation practices</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Digital Design & FPGA</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Xilinx Spartan-3E</span>
+                            <span class="skill-tag">Verilog/VHDL</span>
+                            <span class="skill-tag">RTL</span>
+                            <span class="skill-tag">FSMs</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Embedded Systems</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">ARM/AVR MCUs</span>
+                            <span class="skill-tag">SPI</span>
+                            <span class="skill-tag">I²C</span>
+                            <span class="skill-tag">UART</span>
+                            <span class="skill-tag">USB</span>
+                            <span class="skill-tag">Ethernet/TCP/IP</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Programming</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">C/C++</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>PCB & Hardware</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Cadence Allegro</span>
+                            <span class="skill-tag">Mixed-Signal PCB</span>
+                            <span class="skill-tag">EMI/ESD</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Test & Validation</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Oscilloscopes</span>
+                            <span class="skill-tag">Logic Analyzer</span>
+                            <span class="skill-tag">Signal Generators</span>
+                            <span class="skill-tag">V&V</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Modeling & Simulation</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MATLAB/Simulink</span>
+                            <span class="skill-tag">LTspice/PSpice</span>
+                            <span class="skill-tag">iBwave</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Systems & Compliance</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">DO-160</span>
+                            <span class="skill-tag">Git/GitHub</span>
+                            <span class="skill-tag">JIRA</span>
+                            <span class="skill-tag">JAMA</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>University Projects</h2>
+                <div class="projects">
+                    <div class="project-card">
+                        <h3>Automated Pill Sorter (Senior Design Project Leader)</h3>
+                        <p>Vision-based embedded system using ESP8266 and OpenCV with stepper motor control for real-time closed-loop operation.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>FPGA/HDL Design</h3>
+                        <p>Implemented Verilog/VHDL FSMs, ALUs, and counters on Xilinx Spartan-3E; verified with RTL timing and waveform analysis.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Microcontroller & Drivers</h3>
+                        <p>Bare-metal SPI, I²C, and UART (RS-232) bring-up with interrupt/timer testing using bench instruments.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Embedded RS-232 ↔ TCP/IP Interface</h3>
+                        <p>Developed microcontroller-based serial-to-Ethernet interface with protocol translation capabilities.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Motor Control & ADC/DAC Systems</h3>
+                        <p>Designed and implemented closed-loop motor control and precision signal-conversion systems.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>DSP & Channel Coding</h3>
+                        <p>Implemented modulation schemes, filtering, and error correction algorithms in MATLAB; performed RF channel analysis.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Additional Information</h2>
+                <p><strong>Professional Affiliations:</strong> IEEE Communications Society</p>
+                <p><strong>Languages:</strong> English (Native), Vietnamese (Elementary – Heritage Speaker)</p>
+                <p><strong>Security Clearance:</strong> U.S. Citizen — Eligible for ITAR/EAR clearances</p>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Peter Vinh Chau | Irvine, CA</p>
+        </footer>
+    </div>
+</body>
+</html>
